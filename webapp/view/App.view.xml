@@ -1,0 +1,22 @@
+<mvc:View
+	controllerName="ui5lab.app.SquareApp.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:lab="ui5lab.control"
+	xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Slider value="{view>/size}" min="50" max="500"/>
+					<lab:Square text="A" size="100"/>
+					<lab:Square text="wonderful" size="{view>/size}"/>
+					<lab:Square text="pile" size="80"/>
+					<lab:Square text="of" size="140"/>
+					<lab:Square text="custom" size="90"/>
+					<lab:Square text="Squares" size="170"/>
+					<lab:Square text="!" size="50"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

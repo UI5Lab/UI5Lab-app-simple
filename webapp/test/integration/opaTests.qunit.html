@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>OPA Tests for SquareApp</title>
+
+	<script id="sap-ui-bootstrap"
+			src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-resourceroots='{
+				"ui5lab.app.SquareApp": "../../",
+				"ui5lab.control": "https://rawgit.com/openui5/UI5Lab-control-simple/master/src/ui5lab/control/"
+			}'>
+	</script>
+
+	<script>
+		jQuery.sap.require("sap.ui.qunit.qunit-css");
+		jQuery.sap.require("sap.ui.thirdparty.qunit");
+		jQuery.sap.require("sap.ui.qunit.qunit-junit");
+		jQuery.sap.require("sap.ui.qunit.qunit-coverage");
+
+		QUnit.config.autostart = false;
+
+		sap.ui.require([
+			"sap/ui/test/Opa5",
+			"sap/ui/test/opaQunit"
+		], function (Opa5, opaTest) {
+			QUnit.module("Smoke Test");
+
+			Opa5.extendConfig({
+				autoWait : true
+			});
+
+			opaTest("Should see 7 wonderful squares", function(Given, When, Then) {
+				// Act
+				Given.iStartMyUIComponent({
+					componentConfig: {
+						name: "ui5lab.app.SquareApp"
+					},
+					hash: ""
+				})
+
+				// Assert
+				Then.waitFor({
+					controlType: "sap.m.Slider",
+					success : function () {
+						Opa5.assert.ok(true, "Found a Slider");
+					},
+					errorMessage : "Could not find a Slider"
+				});
+
+				Then.waitFor({
+					controlType: "ui5lab.control.Square",
+					success : function (aSquares) {
+							Opa5.assert.strictEqual(aSquares.length, 7, "Found 7 Squares");
+					},
+					errorMessage : "Could not find a single Square"
+				});
+
+				// Cleanup
+				Then.iTeardownMyUIComponent();
+			});
+
+			QUnit.start();
+		});
+	</script>
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+</body>
+</html>
