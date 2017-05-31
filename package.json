@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "postinstall": "node postInstall.js"
+  },
+  "devDependencies": {
+    "ui5lab-library-simple": "^0.1.0",
+    "fs-extra": "^3.0.0"
+  }
+}

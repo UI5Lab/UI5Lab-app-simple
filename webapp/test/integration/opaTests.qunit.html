@@ -8,7 +8,7 @@
 			data-sap-ui-theme="sap_belize"
 			data-sap-ui-resourceroots='{
 				"ui5lab.app.SquareApp": "../../",
-				"ui5lab.control": "https://rawgit.com/openui5/UI5Lab-control-simple/master/src/ui5lab/control/"
+				"ui5lab.geometry": "../../thirdparty/ui5lab/geometry/"
 			}'>
 	</script>
 
@@ -30,14 +30,14 @@
 				autoWait : true
 			});
 
-			opaTest("Should see 7 wonderful squares", function(Given, When, Then) {
+			opaTest("Should see 7 wonderful squares, 1 Circle (Square with round edges) and 1 Triangle", function(Given, When, Then) {
 				// Act
 				Given.iStartMyUIComponent({
 					componentConfig: {
 						name: "ui5lab.app.SquareApp"
 					},
 					hash: ""
-				})
+				});
 
 				// Assert
 				Then.waitFor({
@@ -49,13 +49,28 @@
 				});
 
 				Then.waitFor({
-					controlType: "ui5lab.control.Square",
+					controlType: "ui5lab.geometry.Square",
 					success : function (aSquares) {
-							Opa5.assert.strictEqual(aSquares.length, 7, "Found 7 Squares");
+							Opa5.assert.strictEqual(aSquares.length, 8, "Found 8 Squares with pointed and round edges");
 					},
 					errorMessage : "Could not find a single Square"
 				});
 
+				Then.waitFor({
+					controlType: "ui5lab.geometry.Circle",
+					success : function (aCircles) {
+						Opa5.assert.strictEqual(aCircles.length, 1, "Found 1 Circle");
+					},
+					errorMessage : "Could not find a single Circle"
+				});
+
+				Then.waitFor({
+					controlType: "ui5lab.geometry.Triangle",
+					success : function (aTriangle) {
+						Opa5.assert.strictEqual(aTriangle.length, 1, "Found 1 Triangle");
+					},
+					errorMessage : "Could not find a single Triangle"
+				});
 				// Cleanup
 				Then.iTeardownMyUIComponent();
 			});
