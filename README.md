@@ -39,7 +39,7 @@ cd UI5Lab-app-simple
 3. Adapt the file `package.json` to retrieve the desired Custom Control library.
 (In this demonstration `ui5lab-library-simple`)
 
-```
+``` json
 {
   "scripts": {
     "postinstall": "node postInstall.js"
@@ -54,7 +54,7 @@ cd UI5Lab-app-simple
 4. Adapt the file `postInstall.json` to copy the files of the Custom Control library from the nodes_modules-directory to the application folder.
 (In this demonstration to `./webapp/thirdparty`)
 
-```
+```javascript
 var fs = require('fs-extra');
 
 fs.copySync('./node_modules/ui5lab-library-simple/dist/resources/', './webapp/thirdparty');
@@ -92,7 +92,7 @@ npm install
 8. Adapt `App.view.xml` to consume the Custom Controls.
 (In this demonstration `ui5lab.geometry.Square`, `ui5lab.geometry.Circle` and `ui5lab.geometry.Triangle`)
 
-```
+```xml
 <mvc:View
 	controllerName="ui5lab.app.SquareApp.controller.App"
 	xmlns:mvc="sap.ui.core.mvc"
