@@ -8,6 +8,25 @@ Feel free to adopt!
 
 ## Getting started
 
+### The easy way (just run this app)
+
+1. Install node.js (get it from [nodejs.org](http://nodejs.org/)).
+ * If working behind a proxy, you need to configure it properly (HTTP_PROXY / HTTPS_PROXY / NO_PROXY environment variables)
+
+2. Clone the repository and navigate into it
+```sh
+git clone https://github.com/openui5/UI5Lab-app-simple
+cd UI5Lab-app-simple
+```
+
+3. Install all npm dependencies (also installs all bower dependencies)
+```sh
+npm install
+```
+
+4. Deploy the application folder to your favorite webserver and use the [App](webapp/index.html)
+
+### The more detailed way (modify this app to match your requirements)
 1. Install node.js (get it from [nodejs.org](http://nodejs.org/)).
  * If working behind a proxy, you need to configure it properly (HTTP_PROXY / HTTPS_PROXY / NO_PROXY environment variables)
 
