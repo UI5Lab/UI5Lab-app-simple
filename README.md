@@ -69,7 +69,7 @@ npm install
 6. Adapt `index.html` to consume the Custom Control library.
 (In this demonstration `ui5lab.geometry`)
 
-```javascript
+```
 ...
     data-sap-ui-resourceroots='{
         "ui5lab.app.SquareApp": "./",
@@ -80,7 +80,7 @@ npm install
 
 7. Adapt `opaTest.unit.html` to consume the Custom Control library.
 (In this demonstration `ui5lab.geometry`)
-```javascript
+```
 ...
 	data-sap-ui-resourceroots='{
         "ui5lab.app.SquareApp": "../../",
