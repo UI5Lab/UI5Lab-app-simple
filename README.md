@@ -123,7 +123,7 @@ npm install
 
 ### Directions
 
-[Demo gh-pages](https://ui5lab.github.io/UI5Lab-app-simple/index.html) An App based on the "UI5 Application" template instantiating ui5lab controls
+[Demo page](https://ui5lab.github.io/UI5Lab-app-simple/index.html) An App based on the "UI5 Application" template instantiating ui5lab controls
 
 [App page](webapp/index.html) Path to the source code for the demo above
 
