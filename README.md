@@ -123,7 +123,9 @@ npm install
 
 ### Directions
 
-[App page](webapp/index.html) An App based on the "UI5 Application" template instantiating ui5lab controls
+[Demo gh-pages](https://ui5lab.github.io/UI5Lab-app-simple/index.html) An App based on the "UI5 Application" template instantiating ui5lab controls
+
+[App page](webapp/index.html) Path to the source code for the demo above
 
 [Test page](webapp/test/integration/opaTests.qunit.html) A simple integration test written in OPA
 
