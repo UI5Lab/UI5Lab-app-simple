@@ -1,134 +1,64 @@
+![UI5Lab Ecosystem](https://github.com/Michadelic/UI5Lab-central/raw/master/docs/UI5LabLogoPhoenix.png)
+
+# What is it
+
+UI5Lab is a community driven repository for UI5 custom control libraries. Your contributions will drive our vision: A place where custom controls, templates, helper classes, and other code artifacts related to UI5 technology can be discovered and shared with the community.
+
+# Get started
+
+#### Browse libraries and samples
+Have a look at the [UI5Lab browser](https://ui5lab.io/browser), where all current UI5Lab libraries and controls can be viewed
+
+#### Use a UI5Lab library in your app
+Follow the instructions in [this guide](https://github.com/UI5Lab/UI5Lab-central/blob/master/docs/ConsumeLibrary.md) or take a look at the [UI5Lab-app-simple](https://github.com/UI5Lab/UI5Lab-app-simple) project
+
+#### Contribute to UI5Lab
+Have a look at our [contributing guide]((https://github.com/UI5Lab/UI5Lab-central/blob/master/CONTRIBUTING.md) to help us with our mission
+
 # UI5Lab-app-simple
-A simple app to consume artifacts of UI5Lab
 
-### What is in here?
+This repository contains a simple app that consumes custom controls from the UI5Lab example library [geometry](https://github.com/UI5Lab/UI5Lab-library-simple).
 
-A test app that may be used as a starting point for the UI5Lab repo.
-Feel free to adopt!
+#### Setup
 
-## Getting started
-
-### The easy way (just run this app)
+Run the following commands to test or develop this project:
 
 1. Install node.js (get it from [nodejs.org](http://nodejs.org/)).
- * If working behind a proxy, you need to configure it properly (HTTP_PROXY / HTTPS_PROXY / NO_PROXY environment variables)
+
+	> **Note:** If working behind a proxy, you need to configure it properly (HTTP_PROXY / HTTPS_PROXY / NO_PROXY environment variables)
 
 2. Clone the repository and navigate into it
-```sh
-git clone https://github.com/openui5/UI5Lab-app-simple
+	```sh
+git clone https://github.com/UI5Lab/UI5Lab-app-simple
 cd UI5Lab-app-simple
-```
+	```
 
 3. Install all npm dependencies (also installs all bower dependencies)
-```sh
+	```sh
 npm install
-```
+	```
 
-4. Deploy the application folder to your favorite webserver and use the [App](webapp/index.html)
+4. Deploy the application folder to your favorite webserver
 
-### The more detailed way (modify this app to match your requirements)
-1. Install node.js (get it from [nodejs.org](http://nodejs.org/)).
- * If working behind a proxy, you need to configure it properly (HTTP_PROXY / HTTPS_PROXY / NO_PROXY environment variables)
+5. Choose one of the following entry points to open the app
 
-2. Clone the repository and navigate into it
-```sh
-git clone https://github.com/openui5/UI5Lab-app-simple
-cd UI5Lab-app-simple
-```
+ * [App page](webapp/index.html) Path to the source code for the demo above
+ * [Test page](webapp/test/integration/opaTests.qunit.html) A simple integration test written in OPA
 
-3. Adapt the file `package.json` to retrieve the desired Custom Control library.
-(In this demonstration `ui5lab-library-simple`)
+# Directions
 
-``` json
-{
-  "scripts": {
-    "postinstall": "node postInstall.js"
-  },
-  "devDependencies": {
-    "ui5lab-library-simple": "^0.1.0",
-    "fs-extra": "^3.0.0"
-  }
-}
-```
+* [Project Overview](https://github.com/UI5Lab/UI5Lab-central/blob/master/docs/Overview.md) - introduction to UI5Lab and information on all related repositories
+* [Documentation](https://github.com/UI5Lab/UI5Lab-central/tree/master/docs) - detailed description on all UI5Lab topics and tutorials
+* [Homepage](https://ui5lab.io) - the single point of entry for UI5Lab
+* [Browser](https://ui5lab.io/browser) - lists all libraries and examples in once central place
+* [Demo](https://ui5lab.github.io/UI5Lab-app-simple/index.html) - an example app consuming simple UI5Lab controls
 
-4. Adapt the file `postInstall.json` to copy the files of the Custom Control library from the nodes_modules-directory to the application folder.
-(In this demonstration to `./webapp/thirdparty`)
+# Troubleshooting
+Issues can be created either in this repository or in any of the contributor repositories depending on where the error came from.
+Be sure to include enough details and context to reproduce the issue and follow up with you.
 
-```javascript
-var fs = require('fs-extra');
+# Contact
+We organize this project in [Slack Channel #UI5Lab](https://openui5.slack.com/messages/UI5lab).
+If you are interested in what we do and discuss, join with this [invitation link](http://slackui5invite.herokuapp.com/).
 
-fs.copySync('./node_modules/ui5lab-library-simple/dist/resources/', './webapp/thirdparty');
-```
-
-5. Install all npm dependencies (also installs all bower dependencies)
-
-```sh
-npm install
-```
-
-6. Adapt `index.html` to consume the Custom Control library.
-(In this demonstration `ui5lab.geometry`)
-
-```
-...
-    data-sap-ui-resourceroots='{
-        "ui5lab.app.SquareApp": "./",
-        "ui5lab.geometry": "./thirdparty/ui5lab/geometry/"
-    }'>
-...
-```
-
-7. Adapt `opaTest.unit.html` to consume the Custom Control library.
-(In this demonstration `ui5lab.geometry`)
-```
-...
-	data-sap-ui-resourceroots='{
-        "ui5lab.app.SquareApp": "../../",
-        "ui5lab.geometry": "../../thirdparty/ui5lab/geometry/"
-    }'>
-...
-```
-
-8. Adapt `App.view.xml` to consume the Custom Controls.
-(In this demonstration `ui5lab.geometry.Square`, `ui5lab.geometry.Circle` and `ui5lab.geometry.Triangle`)
-
-```xml
-<mvc:View
-	controllerName="ui5lab.app.SquareApp.controller.App"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:lab="ui5lab.geometry"
-	xmlns="sap.m">
-	<App>
-		<pages>
-			<Page title="{i18n>title}">
-				<content>
-					<Slider value="{view>/size}" min="50" max="500"/>
-					<lab:Square text="A" size="100"/>
-					<lab:Square text="wonderful" size="{view>/size}"/>
-					<lab:Square text="pile" size="80"/>
-					<lab:Square text="of" size="140"/>
-					<lab:Square text="custom" size="90"/>
-					<lab:Square text="Squares" size="170"/>
-					<lab:Square text="!" size="50"/>
-					<lab:Circle text="Circle" size="{view>/size}"/>
-					<lab:Triangle text="Triangle" size="{view>/size}" rotation="{= ${view>/size} / 2 - 100}"/>
-				</content>
-			</Page>
-		</pages>
-	</App>
-</mvc:View>
-```
-
-9. Deploy the application folder to your favorite webserver and use the [App](webapp/index.html)
-
-### Directions
-
-[Demo page](https://ui5lab.github.io/UI5Lab-app-simple/index.html) An App based on the "UI5 Application" template instantiating ui5lab controls
-
-[App page](webapp/index.html) Path to the source code for the demo above
-
-[Test page](webapp/test/integration/opaTests.qunit.html) A simple integration test written in OPA
-
-### Contributing
-
-Instructions how to connect to the community and contribute to the UI5lab project can be found in the [main repository](https://github.com/openui5/UI5Lab/)!
+*The UI5Lab Community*
