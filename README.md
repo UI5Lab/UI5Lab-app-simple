@@ -13,7 +13,7 @@ Have a look at the [UI5Lab browser](https://ui5lab.io/browser), where all curren
 Follow the instructions in [this guide](https://ui5lab.github.io/UI5Lab-docs/#/how_to/consume_library) or take a look at the [UI5Lab-app-simple](https://github.com/UI5Lab/UI5Lab-app-simple) project
 
 #### Contribute to UI5Lab
-Have a look at our [contributing guide]((https://github.com/UI5Lab/UI5Lab-central/blob/master/CONTRIBUTING.md) to help us with our mission
+Have a look at our [contributing guide](https://ui5lab.github.io/UI5Lab-docs/#/how_to/contribute_custom_control_library) to help us with our mission
 
 # UI5Lab-app-simple
 
