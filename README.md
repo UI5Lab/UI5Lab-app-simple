@@ -28,15 +28,15 @@ Run the following commands to test or develop this project:
 	> **Note:** If working behind a proxy, you need to configure it properly (HTTP_PROXY / HTTPS_PROXY / NO_PROXY environment variables)
 
 2. Clone the repository and navigate into it
-	```bash
+```bash
 git clone https://github.com/UI5Lab/UI5Lab-app-simple
 cd UI5Lab-app-simple
-	```
+```
 
 3. Install all npm dependencies (also installs all bower dependencies)
-	```bash
+```bash
 npm install
-	```
+```
 
 4. Deploy the application folder to your favorite webserver
 
