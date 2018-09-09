@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="ui5lab.app.SquareApp.controller.App"
+	controllerName="ui5lab.app.GeometryApp.controller.App"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:lab="ui5lab.geometry"
 	xmlns="sap.m">
@@ -16,7 +16,7 @@
 					<lab:Square text="Squares" size="170"/>
 					<lab:Square text="!" size="50"/>
 					<lab:Circle text="Circle" size="{view>/size}"/>
-					<lab:Triangle text="Triangle" size="{view>/size}" rotation="{= ${view>/size} / 2 - 100}"/>
+					<lab:Triangle text="Triangle" size="{view>/size}" rotation="{= Math.round(${view>/size} / 2 - 100)}"/>
 				</content>
 			</Page>
 		</pages>

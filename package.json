@@ -1,9 +1,28 @@
 {
+  "name": "ui5lab-app-simple",
+  "version": "1.0.1",
+  "description": "A simple app that consumes custom controls from the UI5Lab example library",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UI5Lab/UI5Lab-app-simple.git"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://ui5lab.io",
   "scripts": {
-    "postinstall": "node postInstall.js"
+    "postinstall": "node postInstall.js",
+    "start": "ui5 serve",
+    "test": "node-qunit-phantomjs http://localhost:8080/test/integration/opaTests.qunit.html --timeout=42"
+  },
+  "dependencies": {
+    "@openui5/sap.ui.core": "^1.52.5",
+    "@openui5/sap.m": "^1.52.5",
+    "@openui5/themelib_sap_belize": "^1.52.5"
   },
   "devDependencies": {
     "ui5lab-library-simple": "^0.1.0",
+    "@ui5/cli": "^0.2.0",
+    "node-qunit-phantomjs": "^1.5.0",
     "fs-extra": "^3.0.0"
   }
 }

@@ -6,7 +6,7 @@ UI5Lab is a community driven repository for UI5 Custom Control Libraries. It's p
 
 # UI5Lab-app-simple
 
-This repository contains a simple app that consumes custom controls from the UI5Lab example library [geometry](https://github.com/UI5Lab/UI5Lab-library-simple). Have a look at our [documentation](http://ui5lab.io/docs/) for more details. 
+This repository contains a simple app that consumes custom controls from the UI5Lab example library [geometry](https://github.com/UI5Lab/UI5Lab-library-simple). Have a look at our [documentation](http://ui5lab.io/docs/) for more details.
 
 #### Setup
 
@@ -27,7 +27,13 @@ cd UI5Lab-app-simple
 npm install
 ```
 
-4. Deploy the application folder to your favorite webserver
+4. Start a local web server
+
+```bash
+npm start
+```
+
+> **Note:** you can run the app tests with ```npm test```
 
 5. Choose one of the following entry points to open the app
 
@@ -44,7 +50,7 @@ npm install
 # Troubleshooting
 
 Issues can be created either in this repository or in any of the contributor repositories depending on where the error came from.
-Be sure to include enough details and context to reproduce the issue and follow up with you. 
+Be sure to include enough details and context to reproduce the issue and follow up with you.
 
 # Contact
 
