@@ -11,7 +11,7 @@
   "homepage": "https://ui5lab.io",
   "scripts": {
     "postinstall": "node postInstall.js",
-    "start": "ui5 serve",
+    "start": "ui5 serve  --open index.html",
     "test": "node-qunit-phantomjs http://localhost:8080/test/integration/opaTests.qunit.html --timeout=42"
   },
   "dependencies": {
