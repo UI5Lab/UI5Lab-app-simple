@@ -4,7 +4,7 @@ sap.ui.define([
 ], function(Controller, JSONModel) {
 	"use strict";
 
-	return Controller.extend("ui5lab.app.SquareApp.controller.App", {
+	return Controller.extend("ui5lab.app.GeometryApp.controller.App", {
 		onInit: function () {
 			var oViewModel = new JSONModel({
 				size : 200
