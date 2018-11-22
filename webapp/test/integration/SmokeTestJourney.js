@@ -1,6 +1,5 @@
-QUnit.config.autostart = false;
 
-sap.ui.require([
+sap.ui.define([
 	"sap/ui/test/Opa5",
 	"sap/ui/test/opaQunit"
 ], function (Opa5, opaTest) {
@@ -58,5 +57,4 @@ sap.ui.require([
 		Then.iTeardownMyUIComponent();
 	});
 
-	QUnit.start();
 });
