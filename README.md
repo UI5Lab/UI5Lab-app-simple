@@ -53,7 +53,8 @@ npm run build
 
 Creates optimized preloads for the app and all used libraries
 
-1. Build app and switch to CDN bootstrap (demo)
+
+2. Build app and switch to CDN bootstrap (demo)
 
 ```bash
 npm run buildCDN
@@ -62,7 +63,8 @@ npm run buildCDN
 Creates an optimized app switched to CDN bootstrap for best loading performance.
 You can find the [published app](https://ui5lab.github.io/UI5Lab-app-simple/index.html) in the ```gh-pages``` branch.
 
-2. Self-contained build (minimal)
+
+3. Self-contained build (minimal)
 
 ```bash
 npm run buildSelfContained
