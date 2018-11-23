@@ -7,10 +7,6 @@ sap.ui.define([
 
 	QUnit.module("Smoke Test");
 
-	Opa5.extendConfig({
-		autoWait : true
-	});
-
 	opaTest("Should see 7 wonderful squares, 1 Circle (Square with round edges) and 1 Triangle", function(Given, When, Then) {
 		// Act
 		Given.iStartMyUIComponent({

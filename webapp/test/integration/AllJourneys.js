@@ -5,7 +5,7 @@ sap.ui.define([
 	"use strict";
 
 	Opa5.extendConfig({
-		pollingInterval: 1
+		autoWait : true
 	});
 
 });
