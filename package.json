@@ -12,7 +12,7 @@
   "scripts": {
     "start": "ui5 serve",
     "test": "ui5 serve -o test/integration/opaTests.qunit.html",
-    "build": "ui5 build",
+    "build": "ui5 build && node publish",
     "buildSelfContained": "ui5 build self-contained -a"
   },
   "dependencies": {
@@ -22,6 +22,9 @@
     "ui5lab-library-simple": "^1.0.0"
   },
   "devDependencies": {
-    "@ui5/cli": "*"
+    "@ui5/cli": "*",
+    "fs-extra": "^7.0.0",
+    "glob": "^7.1.3",
+    "replace-in-file": "^3.4.2"
   }
 }

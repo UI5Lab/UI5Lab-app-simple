@@ -27,7 +27,7 @@ cd UI5Lab-app-simple
 npm install
 ```
 
-4. Start a local web server
+4. Start a local web server for development
 
 ```bash
 npm start
@@ -39,6 +39,23 @@ npm start
 
  * [App page](webapp/index.html) Path to the source code for the demo above
  * [Test page](webapp/test/integration/opaTests.qunit.html) A simple integration test written in OPA
+
+# Publish
+
+The ui5 tooling in combination with the local ```publish.js``` node script make your optimized app ready to be deployed on a web server.
+
+1. Build and switch the app to CDN bootstrap
+
+```bash
+npm run build
+```
+
+You can find the [published app](https://ui5lab.github.io/UI5Lab-app-simple/index.html) in the ```gh-pages``` branch.
+
+2. Create a self-contained build including minimal library and app resources
+```bash
+npm run buildSelfContained
+```
 
 # Directions
 
