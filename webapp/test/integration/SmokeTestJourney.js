@@ -51,7 +51,7 @@ sap.ui.define([
 				Opa5.assert.strictEqual(aTriangle.length, 1, "Found 1 Triangle");
 			},
 			errorMessage : "Could not find a single Triangle"
-		})
+		});
 
 		// Cleanup
 		Then.iTeardownMyUIComponent();
