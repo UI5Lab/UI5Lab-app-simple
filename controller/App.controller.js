@@ -1,15 +1,1 @@
-sap.ui.define([
-	"sap/ui/core/mvc/Controller",
-	"sap/ui/model/json/JSONModel"
-], function(Controller, JSONModel) {
-	"use strict";
-
-	return Controller.extend("ui5lab.app.SquareApp.controller.App", {
-		onInit: function () {
-			var oViewModel = new JSONModel({
-				size : 200
-			});
-			this.getView().setModel(oViewModel, "view");
-		}
-	});
-});
+sap.ui.define(["sap/ui/core/mvc/Controller","sap/ui/model/json/JSONModel"],function(e,i){"use strict";return e.extend("ui5lab.app.GeometryApp.controller.App",{onInit:function(){var e=new i({size:200});this.getView().setModel(e,"view")}})});

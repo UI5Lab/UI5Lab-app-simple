@@ -1,35 +1,23 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta charset="UTF-8">
-
-		<title>SquareApp</title>
-
-		<script id="sap-ui-bootstrap"
-			src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
-			data-sap-ui-libs="sap.m"
-			data-sap-ui-theme="sap_belize"
-			data-sap-ui-compatVersion="edge"
-			data-sap-ui-resourceroots='{
-				"ui5lab.app.SquareApp": "./",
-				"ui5lab.geometry": "./thirdparty/ui5lab/geometry/"
-			}'>
-		</script>
-
-		<script>
-			sap.ui.getCore().attachInit(function() {
-				new sap.m.Shell({
-					app: new sap.ui.core.ComponentContainer({
-						name : "ui5lab.app.SquareApp"
-					})
-				}).placeAt("content");
-			});
-		</script>
-	</head>
-
-	<body class="sapUiBody" id="content">
-	</body>
-
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GeometryApp</title>
+	<script id="sap-ui-bootstrap"
+		src="https://openui5nightly.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-libs="sap.m"
+		data-sap-ui-theme="sap_belize"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-async="true"
+		data-sap-ui-resourceroots='{
+			"ui5lab.app.GeometryApp": "./",
+			"ui5lab": "thirdparty/ui5lab"
+		}'>
+	</script>
+</head>
+<body class="sapUiBody" id="content">
+	<div data-sap-ui-component data-name="ui5lab.app.GeometryApp" data-id="container" data-settings='{"id" : "GeometryApp"}'></div>
+</body>
 </html>
