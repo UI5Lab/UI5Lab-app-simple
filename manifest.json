@@ -1,7 +1,7 @@
 {
 	"_version": "1.5.0",
 	"sap.app": {
-		"id": "ui5lab.app.SquareApp",
+		"id": "ui5lab.app.GeometryApp",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -41,14 +41,15 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "ui5lab.app.SquareApp.view.App",
+			"viewName": "ui5lab.app.GeometryApp.view.App",
 			"type": "XML"
 		},
 		"dependencies": {
-			"minUI5Version": "1.30.0",
+			"minUI5Version": "1.60.0",
 			"libs": {
 				"sap.ui.core": {},
-				"sap.m": {}
+				"sap.m": {},
+				"ui5lab.geometry": {}
 			}
 		},
 		"contentDensities": {
@@ -59,7 +60,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "ui5lab.app.SquareApp.i18n.i18n"
+					"bundleName": "ui5lab.app.GeometryApp.i18n.i18n"
 				}
 			}
 		},

@@ -1,0 +1,44 @@
+{
+	"name": "ui5lab-app-simple",
+	"version": "1.0.1",
+	"buildTimestamp": 1542968998473,
+	"scmRevision": "",
+	"libraries": [
+		{
+			"name": "sap.ui.unified",
+			"version": "1.60.1",
+			"buildTimestamp": 1542968998473,
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.core",
+			"version": "1.60.1",
+			"buildTimestamp": 1542968998473,
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.m",
+			"version": "1.60.1",
+			"buildTimestamp": 1542968998473,
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.f",
+			"version": "1.60.1",
+			"buildTimestamp": 1542968998473,
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.layout",
+			"version": "1.60.1",
+			"buildTimestamp": 1542968998473,
+			"scmRevision": ""
+		},
+		{
+			"name": "ui5lab-library-simple",
+			"version": "1.0.0",
+			"buildTimestamp": 1542968998473,
+			"scmRevision": ""
+		}
+	]
+}

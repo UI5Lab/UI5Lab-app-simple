@@ -1,42 +1,4 @@
 /*!
  * ${copyright}
  */
-
-sap.ui.define([],
-	function() {
-	"use strict";
-
-	/**
-	 * Example renderer.
-	 * @namespace
-	 */
-	var CircleRenderer = {};
-
-	/**
-	 * Renders the HTML for the control, using the provided {@link sap.ui.core.RenderManager}.
-	 *
-	 * @param {sap.ui.core.RenderManager} oRm RenderManager object
-	 * @param {sap.ui.core.Control} oControl An object representation of the control that will be rendered
-	 */
-	CircleRenderer.render = function(oRm, oControl) {
-		oRm.write("<div");
-		oRm.writeControlData(oControl);
-		oRm.addClass("ui5labSquare");
-		oRm.addClass("ui5labCircle");
-		oRm.writeClasses();
-
-		oRm.addStyle("width", oControl.getSize() + "px");
-		oRm.addStyle("height", oControl.getSize() + "px");
-		oRm.addStyle("line-height", (oControl.getSize() - 32) + "px");
-		oRm.writeStyles();
-
-		oRm.write(">");
-
-		oRm.writeEscaped(oControl.getText());
-
-		oRm.write("</div>");
-	};
-
-	return CircleRenderer;
-
-}, /* bExport= */ true);
+sap.ui.define([],function(){"use strict";var e={};e.render=function(e,t){e.write("<div");e.writeControlData(t);e.addClass("ui5labSquare");e.addClass("ui5labCircle");e.writeClasses();e.addStyle("width",t.getSize()+"px");e.addStyle("height",t.getSize()+"px");e.addStyle("line-height",t.getSize()-32+"px");e.writeStyles();e.write(">");e.writeEscaped(t.getText());e.write("</div>")};return e},true);
