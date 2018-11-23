@@ -1,23 +1,24 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>OPA Tests for GeometryApp</title>
-
+	<meta charset="utf-8">
+	<title>Integration tests for Geometry App</title>
 	<script
 		id="sap-ui-bootstrap"
-		src="/resources/sap-ui-core.js"
+		src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
 		data-sap-ui-libs="sap.m"
 		data-sap-ui-theme="sap_belize"
 		data-sap-ui-async="true"
 		data-sap-ui-resourceroots='{
-			"ui5lab.app.GeometryApp": "../../"
+			"ui5lab.app.GeometryApp": "../../",
+			"ui5lab": "../../thirdparty/ui5lab"
 		}'>
 	</script>
 
-	<link rel="stylesheet" href="/resources/sap/ui/thirdparty/qunit-2.css" type="text/css" media="screen" />
-	<script src="/resources/sap/ui/thirdparty/qunit-2.js"></script>
-	<script src="/resources/sap/ui/qunit/qunit-junit.js"></script>
-	<script src="/resources/sap/ui/qunit/qunit-coverage.js"></script>
+	<link rel="stylesheet" href="https://openui5.hana.ondemand.com/resources/sap/ui/thirdparty/qunit-2.css" type="text/css" media="screen" />
+	<script src="https://openui5.hana.ondemand.com/resources/sap/ui/thirdparty/qunit-2.js"></script>
+	<script src="https://openui5.hana.ondemand.com/resources/sap/ui/qunit/qunit-junit.js"></script>
+	<script src="https://openui5.hana.ondemand.com/resources/sap/ui/qunit/qunit-coverage.js"></script>
 
 	<script src="opaTests.qunit.js"></script>
 </head>
