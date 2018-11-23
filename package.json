@@ -11,7 +11,9 @@
   "homepage": "https://ui5lab.io",
   "scripts": {
     "start": "ui5 serve",
-    "test": "ui5 serve -o test/integration/opaTests.qunit.html"
+    "test": "ui5 serve -o test/integration/opaTests.qunit.html",
+    "build": "ui5 build",
+    "buildSelfContained": "ui5 build self-contained"
   },
   "dependencies": {
     "@openui5/sap.m": "^1.60.1",

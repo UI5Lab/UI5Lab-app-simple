@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"ui5lab/app/GeometryApp/model/models"
+	"ui5lab/app/GeometryApp/model/models",
+	"sap/ui/core/ComponentSupport" // needed for self-contained build
 ], function(UIComponent, Device, models) {
 	"use strict";
 
