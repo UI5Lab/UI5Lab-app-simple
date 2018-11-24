@@ -42,20 +42,35 @@ npm start
 
 # Publish
 
-The ui5 tooling in combination with the local ```publish.js``` node script make your optimized app ready to be deployed on a web server.
+The [UI5 tooling](https://github.com/SAP/ui5-tooling) creates an optimized app ready to be deployed on a web server.
+There are three variants to create an optimized build in the ```dist``` folder included in this repository:
 
-1. Build and switch the app to CDN bootstrap
+1. Build app and libraries (default)
 
 ```bash
 npm run build
 ```
 
+Creates optimized preloads for the app and all used libraries
+
+
+2. Build app and switch to CDN bootstrap (demo)
+
+```bash
+npm run buildCDN
+```
+
+Creates an optimized app switched to CDN bootstrap for best loading performance.
 You can find the [published app](https://ui5lab.github.io/UI5Lab-app-simple/index.html) in the ```gh-pages``` branch.
 
-2. Create a self-contained build including minimal library and app resources
+
+3. Self-contained build (minimal)
+
 ```bash
 npm run buildSelfContained
 ```
+
+Creates a custom UI5 bundle with a minimal set code both from library and app resources
 
 # Directions
 

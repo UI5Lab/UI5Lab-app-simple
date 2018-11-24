@@ -12,8 +12,9 @@
   "scripts": {
     "start": "ui5 serve",
     "test": "ui5 serve -o test/integration/opaTests.qunit.html",
-    "build": "ui5 build && node publish",
-    "buildSelfContained": "ui5 build self-contained -a"
+    "build": "rimraf dist && ui5 build -a",
+    "buildCDN": "rimraf dist && ui5 build && node publish",
+    "buildSelfContained": "rimraf dist && ui5 build self-contained -a"
   },
   "dependencies": {
     "@openui5/sap.m": "^1.60.1",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@ui5/cli": "*",
+    "rimraf": "^2.6.2",
     "fs-extra": "^7.0.0",
     "glob": "^7.1.3",
     "replace-in-file": "^3.4.2"
